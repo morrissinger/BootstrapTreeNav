@@ -33,14 +33,85 @@
 
 <p><a href="http://morrissinger.github.io/BootstrapTreeNav">http://morrissinger.github.io/BootstrapTreeNav</a></p>
 
-<p>BootstrapTreeNav is a javascript plugin for Twitter Bootstrap 3 to help you create tree navigation menus, created and maintained by <a href="http://morrissinger.com">Morris Singer</a>.</p>
+<p>BootstrapTreeNav is a javascript plugin for <a href="http://getbootstrap.com/">Twitter Bootstrap 3</a> to help you create tree navigation menus, created and maintained by <a href="http://morrissinger.com">Morris Singer</a>.</p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p><img src="http://i.imgur.com/BcwvICS.png" alt="Bootstrap Tree Nav by Morris Singer"></p>
 
 <h2>
 <a name="quick-start" class="anchor" href="#quick-start"><span class="octicon octicon-link"></span></a>Quick start</h2>
 
 <p>Clone the repo, <code>git clone git://github.com/morrissinger/BootstrapTreeNav.git</code>, or <a href="https://github.com/morrissinger/BootstrapTreeNav/zipball/master">download the latest release</a>.</p>
 
-<h2>
+<p>Add CSS, or SASS to your project, as appropriate, and add JS. Also, add <a href="http://fontawesome.io/">Font Awesome</a> to your project, if you are not already including it with your installation of Twitter Bootstrap. Then, write your HTML:</p>
+
+<pre><code> &lt;ul class="nav nav-pills nav-stacked nav-tree" id="myTree" data-toggle="nav-tree"&gt;
+     &lt;li&gt;
+         &lt;a href="http://www.example.com" target="_blank"&gt;Item One (With Children) (has link)&lt;/a&gt;
+         &lt;ul class="nav nav-pills nav-stacked nav-tree"&gt;
+             &lt;li&gt;
+                 &lt;a href="#"&gt;Item A (Without Children)&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a href="#"&gt;Item B (Without Children)&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a href="#"&gt;Item C (Without Children)&lt;/a&gt;
+             &lt;/li&gt;
+         &lt;/ul&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+         &lt;a href="#"&gt;Item Two (Without Children)&lt;/a&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+         &lt;a href="#"&gt;Item Three (With Children and Grandchildren)&lt;/a&gt;
+         &lt;ul class="nav nav-pills nav-stacked nav-tree"&gt;
+             &lt;li&gt;
+                 &lt;a href="#"&gt;Item A (With Children)&lt;/a&gt;
+                 &lt;ul class="nav nav-pills nav-stacked nav-tree"&gt;
+                     &lt;li&gt;
+                         &lt;a href="#"&gt;Item I (Without Children)&lt;/a&gt;
+                     &lt;/li&gt;
+                     &lt;li&gt;
+                         &lt;a href="#"&gt;Item II (Without Children)&lt;/a&gt;
+                     &lt;/li&gt;
+                     &lt;li class="active"&gt;
+                         &lt;a href="#"&gt;Item III (Without Children)&lt;/a&gt;
+                     &lt;/li&gt;
+                 &lt;/ul&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a href="#"&gt;Item B (Without Children)&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a href="#"&gt;Item C (With Children)&lt;/a&gt;
+                 &lt;ul class="nav nav-pills nav-stacked nav-tree"&gt;
+                     &lt;li&gt;
+                         &lt;a href="#"&gt;Item I (Without Children)&lt;/a&gt;
+                     &lt;/li&gt;
+                     &lt;li&gt;
+                         &lt;a href="#"&gt;Item II (Without Children)&lt;/a&gt;
+                     &lt;/li&gt;
+                     &lt;li&gt;
+                         &lt;a href="#"&gt;Item III (Without Children)&lt;/a&gt;
+                     &lt;/li&gt;
+                 &lt;/ul&gt;
+             &lt;/li&gt;
+         &lt;/ul&gt;
+     &lt;/li&gt;
+ &lt;/ul&gt;
+</code></pre>
+
+<p>Using the data API, you can also specify icons to display next to expanded and collapsed tree items:</p>
+
+<ul>
+<li>
+<code>data-nav-tree-expanded="icon-collapse-alt"</code>: Use the Font Awesome icon <code>icon-collapse-alt</code> next to expanded items.</li>
+<li>
+<code>data-nav-tree-collapsed="icon-expand-alt"</code>: Use the Font Awesome icon <code>icon-expand-alt</code> next to collapsed items.</li>
+</ul><h2>
 <a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
 
 <p><strong>Morris Singer</strong></p>
