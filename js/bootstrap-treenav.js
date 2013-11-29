@@ -97,13 +97,13 @@
   var expand = function(element) {
     var $opener = $(element).children('span.opener');
     $opener.removeClass('closed').addClass('opened');
-    $(element).children('ul').first().slideDown();
+    $(element).children('ul').first().slideDown('fast');
   };
 
   var collapse = function(element) {
     var $opener = $(element).children('span.opener');
     $opener.removeClass('opened').addClass('closed');
-    $(element).children('ul').first().slideUp();
+    $(element).children('ul').first().slideUp('fast');
   };
 
   $('ul[data-toggle=nav-tree]').each(function(){
